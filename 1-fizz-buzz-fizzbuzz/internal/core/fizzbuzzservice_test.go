@@ -18,7 +18,7 @@ func TestFizzBuzzService_PrintsExpectedNumberOfTimes(t *testing.T) {
 	var want int32 = 50
 
 	var fizzBuzzPrinterMock FizzBuzzPrinter = &fizzBuzzPrinterMock{}
-	var sut fizzBuzzService = fizzBuzzService{
+	var sut FizzBuzzService = &fizzBuzzService{
 		printer: fizzBuzzPrinterMock,
 		start:   1,
 		end:     50,

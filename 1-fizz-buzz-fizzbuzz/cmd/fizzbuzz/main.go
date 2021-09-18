@@ -15,8 +15,8 @@ func main() {
 		println(s)
 	}
 
-	fizzBuzz := core.NewFizzBuzzer()
+	fizzBuzzer := core.NewFizzBuzzer()
 	fizzBuzzPrinter := printer.NewFizzBuzzPrinter(print)
-	fizzBuzzService := core.NewFizzBuzzService(start, end, fizzBuzz, fizzBuzzPrinter)
+	fizzBuzzService := core.NewFizzBuzzService(start, end, fizzBuzzer, fizzBuzzPrinter)
 	fizzBuzzService.Execute()
 }

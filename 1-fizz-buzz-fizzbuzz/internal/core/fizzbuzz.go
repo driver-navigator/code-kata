@@ -2,7 +2,7 @@ package core
 
 import "fmt"
 
-func fizzBuzz(n int) string {
+func fizzBuzz(n int32) string {
 	if n < 1 || n > 100 {
 		return ""
 	}

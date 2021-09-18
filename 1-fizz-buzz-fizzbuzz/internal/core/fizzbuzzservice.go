@@ -5,22 +5,23 @@ type FizzBuzzService interface {
 }
 
 type fizzBuzzService struct {
-	p FizzBuzzPrinter
+	start   int32
+	end     int32
+	printer FizzBuzzPrinter
 }
 
 var _ FizzBuzzService = &fizzBuzzService{}
 
-func NewFizzBuzzService(printer FizzBuzzPrinter) FizzBuzzService {
+func NewFizzBuzzService(printer FizzBuzzPrinter, start int32, end int32) FizzBuzzService {
 	return &fizzBuzzService{
-		p: printer,
+		printer: printer,
+		start:   start,
+		end:     end,
 	}
 }
 
 func (fs *fizzBuzzService) Execute() {
-	min := 1
-	max := 100
-
-	for i := min; i <= max; i++ {
-		fs.p.Print(fizzBuzz(i))
+	for i := fs.start; i <= fs.end; i++ {
+		fs.printer.Print(fizzBuzz(i))
 	}
 }

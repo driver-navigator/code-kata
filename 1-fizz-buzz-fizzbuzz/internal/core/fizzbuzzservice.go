@@ -1,19 +1,15 @@
 package core
 
-type FizzBuzzService interface {
-	Execute()
-}
-
 type fizzBuzzService struct {
 	start    int32
 	end      int32
-	fizzBuzz FizzBuzz
+	fizzBuzz FizzBuzzer
 	printer  FizzBuzzPrinter
 }
 
 var _ FizzBuzzService = &fizzBuzzService{}
 
-func NewFizzBuzzService(start, end int32, fizzBuzz FizzBuzz, printer FizzBuzzPrinter) FizzBuzzService {
+func NewFizzBuzzService(start, end int32, fizzBuzz FizzBuzzer, printer FizzBuzzPrinter) FizzBuzzService {
 	return &fizzBuzzService{
 		start:    start,
 		end:      end,

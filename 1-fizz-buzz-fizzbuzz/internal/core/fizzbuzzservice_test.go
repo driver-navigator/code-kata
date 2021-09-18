@@ -26,7 +26,7 @@ func TestFizzBuzzService_CallsPrintExpectedNumberOfTimes(t *testing.T) {
 	var got int32
 	var want int32 = 50
 
-	var fizzBuzzMock FizzBuzz = &fizzBuzzMock{}
+	var fizzBuzzMock FizzBuzzer = &fizzBuzzMock{}
 	var fizzBuzzPrinterMock FizzBuzzPrinter = &fizzBuzzPrinterMock{}
 	var sut FizzBuzzService = &fizzBuzzService{
 		start:    1,
@@ -54,7 +54,7 @@ func TestFizzBuzzService_CallsFizzBuzzProcessExpectedNumberOfTimes(t *testing.T)
 	var got int32
 	var want int32 = 50
 
-	var fizzBuzzMock FizzBuzz = &fizzBuzzMock{}
+	var fizzBuzzMock FizzBuzzer = &fizzBuzzMock{}
 	var fizzBuzzPrinterMock FizzBuzzPrinter = &fizzBuzzPrinterMock{}
 	var sut FizzBuzzService = &fizzBuzzService{
 		start:    1,

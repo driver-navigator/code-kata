@@ -2,7 +2,20 @@ package core
 
 import "fmt"
 
-func fizzBuzz(n int32) string {
+type FizzBuzz interface {
+	Process(int32) string
+}
+
+type fizzBuzz struct {
+}
+
+var _ FizzBuzz = &fizzBuzz{}
+
+func NewFizzBuzz() FizzBuzz {
+	return &fizzBuzz{}
+}
+
+func (fz *fizzBuzz) Process(n int32) string {
 	if n < 1 || n > 100 {
 		return ""
 	}

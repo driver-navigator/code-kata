@@ -1,25 +1,10 @@
-package printer
+package clearscreen
 
 import (
 	"os"
 	"os/exec"
 	"runtime"
-
-	"github.com/driver-navigator/code-kata/game-of-life/internal/core"
-	"github.com/driver-navigator/code-kata/game-of-life/pkg/matrix"
 )
-
-type printer struct {
-}
-
-func NewPrinter() core.Printer {
-	return &printer{}
-}
-
-func (p *printer) Print(population [][]bool) {
-	clear()
-	matrix.Print(population)
-}
 
 var clearFunc = map[string]func(){
 	"linux": func() {
@@ -34,7 +19,7 @@ var clearFunc = map[string]func(){
 	},
 }
 
-func clear() {
+func Clear() {
 	value, ok := clearFunc[runtime.GOOS]
 	if ok {
 		value()

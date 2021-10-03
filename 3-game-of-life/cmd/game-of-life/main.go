@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/driver-navigator/code-kata/game-of-life/internal/core"
-	"github.com/driver-navigator/code-kata/game-of-life/internal/core/printer"
+	"github.com/driver-navigator/code-kata/3-game-of-life/internal/core"
+	"github.com/driver-navigator/code-kata/3-game-of-life/internal/core/printer"
 )
 
 const (

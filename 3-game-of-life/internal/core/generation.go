@@ -3,7 +3,7 @@ package core
 import (
 	"errors"
 
-	"github.com/driver-navigator/code-kata/game-of-life/pkg/matrix"
+	"github.com/driver-navigator/code-kata/3-game-of-life/pkg/matrix"
 )
 
 type generation struct {

@@ -19,7 +19,7 @@ jobs:
         go-version: 1.17
 
     - name: Build
-      run: for d in ./*/ ; do (printf "\n\nBUILD $d" && cd "$d" && go build -v -a ./cmd/...); done
+      run: for d in ./*/ ; do (cd "$d" && go build -v -a ./cmd/...); done
 
     - name: Test
       run: for d in ./*/ ; do (printf "\n\nTEST $d" && cd "$d" && go test -v ./...); done

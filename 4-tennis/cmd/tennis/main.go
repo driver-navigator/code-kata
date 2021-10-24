@@ -94,7 +94,7 @@ func updateScoreboard(gm tennisgame.TennisGame) {
 		gameStatus,
 		gameStatus,
 	}, table.RowConfig{AutoMerge: true})
-	t.SetStyle(table.StyleLight)
+	t.SetStyle(table.StyleRounded)
 	t.Render()
 
 	ti := table.NewWriter()
@@ -113,7 +113,7 @@ func updateScoreboard(gm tennisgame.TennisGame) {
 	ti.AppendFooter(table.Row{
 		"Please enter below: ",
 	})
-	ti.SetStyle(table.StyleColoredBright)
+	ti.SetStyle(table.StyleColoredBlackOnCyanWhite)
 	ti.Render()
 }
 
